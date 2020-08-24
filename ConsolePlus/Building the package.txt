@@ -1,6 +1,5 @@
-﻿1. Ensure NuGet.exe is within the project folder
-2. Update Version and other details on Quadrivia.FunctionalLibrary.nuspec
-3. Open Package Manager Console
-4. PM> nuget pack C:\MetalUp\ConsolePlus\ConsolePlus\MetalUp.ConsolePlus.nuspec
-5. Sign in to Nuget.org
-6. Manage packages > Add New then drop nupkg file
+﻿1. Go to project Properties, Package tab, and update the version number
+2. Build the project
+3. Nupkg file will be in the bin directory
+4. Sign in to Nuget.org
+5. Manage packages > Add New, then drop nupkg file
