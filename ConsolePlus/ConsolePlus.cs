@@ -75,6 +75,38 @@ namespace MetalUp
             }
             return value;
         }
+
+        /// <summary>
+        /// Prompt the user to enter a Date (in any parseable format)
+        /// The valid range may be optionally specified, as 'earliest' and 'latest' dates, specified
+        /// each specified as days (positive or negative) from Today. The default
+        /// valid range is +/- 100,000 days.
+        /// </summary>
+        /// <returns>The value entered, converted to the specified type.</returns>
+
+        public static DateTime ReadDate(string prompt, int earliest = -100000, int latest = 100000)
+        {
+            DateTime value;
+            DateTime earliestDate = DateTime.Today.AddDays(earliest);
+            DateTime latestDate = DateTime.Today.AddDays(latest);
+            while (true)
+            {
+                Console.Write(prompt);
+                try
+                {
+                    string input = Console.ReadLine();
+                    value = DateTime.Parse(input);
+                    if (value < earliestDate || value > latestDate)
+                    {
+                        throw new Exception();
+                    }
+                    break;
+                }
+                catch (Exception) { }
+                Console.WriteLine(Invalid);
+            }
+            return value;
+        }
         /// <summary>
         /// Prompt the user to enter a value, which must be capable of being converted to the type specified,
         /// and fall within the min/max range specified.  The type specified must be a 'comparable' type.

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>MetalUp.ConsolePlus</id>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <authors>Richard Pawson</authors>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/QuadriviaOrg/ConsolePlus</projectUrl> 
@@ -11,7 +11,6 @@
     <summary></summary>
     <description>Functions to facilitate reading and writing values on the Console.</description>
     <copyright>Copyright 2020</copyright>
-    <releaseNotes>1.0.0</releaseNotes>
   </metadata>
     <files>
       <file src="icon.png" target="images\"/>

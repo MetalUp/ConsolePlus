@@ -5,6 +5,14 @@ namespace MetalUp
     {
         static void Main(string[] args)
         {
+            DateTime d0 = ConsolePlus.ReadDate("...Plus or Minus 7 days: ", -7,7);
+            d0 = ConsolePlus.ReadDate("...Plus or Minus 7 days: ", -7, 7);
+            DateTime d1 = ConsolePlus.ReadDate("Any valid date: ");
+            DateTime d2 = ConsolePlus.ReadDate("...Before today: ", -100000, -1);
+            DateTime d3 = ConsolePlus.ReadDate("...In last 100 years: ", -36500, -1);
+            DateTime d4 = ConsolePlus.ReadDate("...After  today: ", 1);
+
+
             int a = ConsolePlus.ReadType("Int in range 3-7: ", 3, 7);
             Console.WriteLine(a);
             float b = ConsolePlus.ReadType("Float in range 3-7: ", 3.0f, 7.0f);
